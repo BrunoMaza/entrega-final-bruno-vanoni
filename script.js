@@ -1,4 +1,4 @@
-const urlLocal = '../db.json';
+const urlLocal = './db.json';
 
 let productos 
 
