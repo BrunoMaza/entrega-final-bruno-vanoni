@@ -144,6 +144,8 @@ function agregarAlCarrito(productos, idProducto, carrito) {
 
 function renderizarCarrito() {
   const contenedorCarrito = document.getElementById("contenedor-carrito")
+  const contenedorSubtotal = document.getElementById("subtotal")
+  let carritoSubtotal = 0
   contenedorCarrito.innerHTML = ""
 
   carrito.forEach(carrito => {
@@ -160,17 +162,29 @@ function renderizarCarrito() {
    <button id=${carrito.id} onclick="removerDelCarrito(${carrito.id})"> Remover del carrito </button>
    <hr>
    `
+    
+    carritoSubtotal = carritoSubtotal+=carrito.subtotal 
     contenedorCarrito.appendChild(tarjetaCarrito)
   })
+
+  contenedorSubtotal.innerHTML = "<h1>Total: $" + carritoSubtotal + "</h1>"
 }
 
 function removerDelCarrito(id) {
   carrito = carrito.filter(item => item.id !== id);
+  localStorage.setItem("carrito", JSON.stringify(carrito))
   renderizarCarrito();
 }
 
 document.getElementById("finalizar-compra").addEventListener("click", function() {
-  lanzarAlert("¡Compra realizada!", "Gracias por tu compra.", "success", "Aceptar")
+  let carritoStorage = JSON.parse(localStorage.getItem("carrito"))
+  let carritoLleno = carritoStorage.length > 0
+
+  if (carritoLleno) {
+    lanzarAlert("¡Compra realizada!", "Gracias por tu compra.", "success", "Aceptar")
+  } else {
+    lanzarAlert("Su carrito esta vacío", "Añada productos al carrito", "error", "Aceptar")
+  }
 }); 
 
 function filtrarProductosPorCategoria(contenedorProductos, idBoton) {
@@ -227,8 +241,7 @@ function lanzarAlert(title, text, icon, confirmButtonText) {
     title,
     text,
     icon,
-    confirmButtonText,
-    timer: 1000
+    confirmButtonText
   })
 }
 
