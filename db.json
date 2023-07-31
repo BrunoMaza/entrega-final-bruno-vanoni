@@ -14,7 +14,7 @@
             "categoria": "Lámparas de mesa", 
             "stock": 20, 
             "precio": 28500, 
-            "rutaImagen": "Odín-Art-60203.png" 
+            "rutaImagen": "Odin-Art-60203.png" 
         },
         { 
             "id": 60710,
@@ -38,7 +38,7 @@
             "categoria": "Colgantes", 
             "stock": 3, 
             "precio": 18000, 
-            "rutaImagen": "Odín-Art-1212.png" 
+            "rutaImagen": "Odin-Art-1212.png" 
         },
         { 
             "id": 1300, 
@@ -62,7 +62,7 @@
             "categoria": "Lámparas de pie", 
             "stock": 9, 
             "precio": 2650, 
-            "rutaImagen": "Odín-Art-66000.png" 
+            "rutaImagen": "Odin-Art-66000.png" 
         },
         { 
             "id": 7820, 
