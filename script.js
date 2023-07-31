@@ -11,24 +11,6 @@ fetch(urlLocal)
 }
 )
 
-
-
-/* 
-let productos = [
-  { id: 60500, nombre: "Tortuga", categoria: "Lámparas de mesa", stock: 2, precio: 40000, rutaImagen: "Tortuga-Art-60500.jpg" },
-  { id: 60203, nombre: "Odín", categoria: "Lámparas de mesa", stock: 20, precio: 28500, rutaImagen: "Odín-Art-60203.png" },
-  { id: 60710, nombre: "Tortuga", categoria: "Lámparas de mesa", stock: 4, precio: 30000, rutaImagen: "Tortuga-Art-60710.jpg" },
-  { id: 1200, nombre: "Dixon", categoria: "Colgantes", stock: 6, precio: 15000, rutaImagen: "Dixon-Art-1200.jpg" },
-  { id: 1212, nombre: "Odín", categoria: "Colgantes", stock: 3, precio: 18000, rutaImagen: "Odín-Art-1212.png" },
-  { id: 1300, nombre: "Dixon", categoria: "Colgantes", stock: 2, precio: 5600, rutaImagen: "Dixon-Art-1300.jpg" },
-  { id: 77710, nombre: "Tortuga", categoria: "Lámparas de pie", stock: 7, precio: 2650, rutaImagen: "Tortuga-Art-77710.jpg" },
-  { id: 66000, nombre: "Odín", categoria: "Lámparas de pie", stock: 9, precio: 2650, rutaImagen: "Odín-Art-66000.png" },
-  { id: 7820, nombre: "Pixar XL", categoria: "Lámparas de pie", stock: 8, precio: 50000, rutaImagen: "PixarXL-Art-7820.png" },
-  { id: 30900, nombre: "Dixon", categoria: "Aplique de pared", stock: 1, precio: 2650, rutaImagen: "Dixon-Art-30900.jpg" },
-  { id: 30905, nombre: "Dixon", categoria: "Aplique de pared", stock: 10, precio: 2650, rutaImagen: "Dixon-Art-30905.png" },
-  { id: 3460, nombre: "Tortuga", categoria: "Aplique de pared", stock: 15, precio: 50000, rutaImagen: "Tortuga-Art-3460.png" }
-] */
-
 let carritoStorage = JSON.parse(localStorage.getItem("carrito"))
 
 let carrito = carritoStorage ? carritoStorage : []
